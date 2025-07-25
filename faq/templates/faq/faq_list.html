@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block meta_title %}Frequently Asked Questions | Avagen{% endblock %}
+
+{% block meta_description %}Find answers to common questions about Avagen's digitally crafted avatars, purchasing, licensing, and digital art services.{% endblock %}
+
+{% block meta_keywords %}FAQ, frequently asked questions, avatar help, digital art questions, avatar purchase, avatar licensing, digital art support, avatar customization, gaming avatar help, social media avatar, profile picture help, digital identity questions, avatar marketplace FAQ, digital art marketplace, avatar shop help, buy avatar help, avatar gallery FAQ, digital art licensing, avatar design questions, virtual identity help, online avatar support, avatar collection FAQ, digital art purchase, avatar marketplace support{% endblock %}
+
+{% block og_title %}Frequently Asked Questions | Avagen{% endblock %}
+
+{% block og_description %}Find answers to common questions about Avagen's digitally crafted avatars, purchasing, licensing, and digital art services.{% endblock %}
+
+{% block twitter_title %}Frequently Asked Questions | Avagen{% endblock %}
+
+{% block twitter_description %}Find answers to common questions about Avagen's digitally crafted avatars, purchasing, licensing, and digital art services.{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+<div class="row">
+<div class="col"></div>
+</div>
+</div>
+<div class="container mt-5">
+<div class="row">
+<div class="col"></div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+<div class="row">
+<div class="col-12">
+<h1 class="text-center mb-4 text-white">FAQs</h1>
+<div class="faq-list">
+                    {% for faq in faqs %}
+                        <div class="card mb-3 bg-dark">
+<div class="card-body">
+<h5 class="card-title text-white">{{ faq.question }}</h5>
+<p class="card-text text-white">{{ faq.answer }}</p>
+</div>
+</div>
+                    {% empty %}
+                        <p class="text-center text-white">No FAQs available yet.</p>
+                    {% endfor %}
+                </div>
+</div>
+</div>
+</div>
+{% endblock %}

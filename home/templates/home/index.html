@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_title %}Avagen - Where Your Digital Self Begins | Digitally Crafted Avatar Collection{% endblock %}
+
+{% block meta_title %}Avagen - Where Your Digital Self Begins | Digitally Crafted Avatar Collection{% endblock %}
+
+{% block meta_description %}Discover your perfect digital identity at Avagen. Shop our curated collection of digitally crafted avatars for gamers, designers, and digital explorers. Find your avatar to define your presence across gaming, social media and virtual worlds.{% endblock %}
+
+{% block meta_keywords %}digital identity, gaming avatars, profile pictures, virtual worlds, social media avatars, designer avatars, digitally crafted avatars, custom avatars, personalized avatars, avatar design, digital portraits, online avatars, gaming profile pictures, social media profile pictures, virtual world avatars, digital character design, avatar marketplace, premium digital art, unique avatars, creative avatars, artistic avatars, modern avatars, trendy avatars, avatar collection, virtual self, online persona, digital art marketplace, avatar shop, buy avatars, sell avatars{% endblock %}
+
+{% block og_title %}Avagen - Where Your Digital Self Begins{% endblock %}
+
+{% block og_description %}Discover your perfect digital identity at Avagen. Shop our curated collection of digitally crafted avatars for gamers, designers, and digital explorers.{% endblock %}
+
+{% block twitter_title %}Avagen - Where Your Digital Self Begins{% endblock %}
+
+{% block twitter_description %}Discover your perfect digital identity at Avagen. Shop our curated collection of digitally crafted avatars for gamers, designers, and digital explorers.{% endblock %}
+
+{% block extra_head %}
+
+<!-- 
+Structured Data (JSON-LD format) for SEO
+This helps search engines understand the content and purpose of the page.
+-->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",  // Defines the context as Schema.org vocabulary
+    "@type": "WebPage",                // Indicates this page is a general webpage
+  
+    "name": "Avagen - Where Your Digital Self Begins", // Title of the page
+    "description": "Discover your perfect digital identity at Avagen. Shop our curated collection of digitally crafted avatars for gamers, designers, and digital explorers. Find your avatar to define your presence across gaming, social media and virtual worlds.",
+  
+    "url": "{{ request.build_absolute_uri }}", // Dynamically inserts the current page URL
+  
+    "mainEntity": { // Main entity associated with the page — in this case, your organization
+      "@type": "Organization",
+      "name": "Avagen",  // Name of your brand or business
+      "description": "Digitally crafted avatar collection for gaming, social media, and digital identity",
+      "url": "{{ request.build_absolute_uri }}",  // Brand URL
+      "logo": "{{ request.build_absolute_uri }}{% static 'media/avagen_logo_text.webp' %}",  // Logo image URL
+      "sameAs": [ // Links to Avagen's official social media profiles
+        "https://www.instagram.com/avagen",
+        "https://www.facebook.com/avagen",
+        "https://twitter.com/avagen"
+      ]
+    },
+  
+    "publisher": { // The organization publishing the webpage
+      "@type": "Organization",
+      "name": "Avagen",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ request.build_absolute_uri }}{% static 'media/avagen_logo_text.webp' %}" // Publisher logo image
+      }
+    },
+  
+    "potentialAction": { // Defines a search action for the site — enables rich search box in Google
+      "@type": "SearchAction",
+      "target": "{{ request.build_absolute_uri }}{% url 'products' %}?q={search_term_string}", // Search URL template
+      "query-input": "required name=search_term_string" // Required parameter for the query
+    }
+  }
+  </script>
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+<div class="row">
+<div class="col"></div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+<div class="row h-100">
+<div class="col-12 col-md-10 col-lg-8 my-auto">
+<h1 class="display-4 logo-font text-white text-break responsive-headline">
+                    Avagen - Where your digital self begins.
+                    A creative concept store for designers, gamers and explorers of digital realms. Find your avatar to define your presence across gaming, social media and virtual worlds.
+                </h1>
+<p class="lead logo-font text-white text-uppercase mt-4 responsive-subheadline">
+                    Design your persona on Avagen.
+                </p>
+<div class="my-5">
+<h4>
+<a class="shop-now-button btn btn-lg btn-rounded text-uppercase py-3" href="{% url 'products' %}" aria-label="Browse and shop our avatar collection">Shop Now</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

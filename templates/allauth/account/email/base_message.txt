@@ -1,0 +1,7 @@
+{% load i18n %}{% autoescape off %}{% blocktrans %}Hello from Avagen!{% endblocktrans %}
+
+{% block content %}{% endblock %}
+
+{% blocktrans %}Thank you for using Avagen!
+https://avagen-502553ff2610.herokuapp.com{% endblocktrans %}
+{% endautoescape %}
