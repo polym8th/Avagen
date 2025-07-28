@@ -59,6 +59,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",  # listen for stripe webhooks
     ".herokuapp.com",
+    ".railway.app",
+    "web-production-c4b21.up.railway.app",
 ]
 
 # Application definition
