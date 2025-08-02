@@ -61,6 +61,7 @@ ALLOWED_HOSTS = [
     ".herokuapp.com",
     ".railway.app",
     "web-production-c4b21.up.railway.app",
+    "avagen.co.uk", 
 ]
 
 # Application definition
