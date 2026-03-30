@@ -361,7 +361,7 @@ class Product(models.Model):
 * **Backend** – Python 3.13, Django 5, Django‑Allauth, Stripe SDK
 * **Database** – PostgreSQL 16, AWS RDS (production)
 * **Frontend** – HTML5, CSS3, Bootstrap 5, JavaScript, jQuery for some DOM manipulation
-* **Dev‑Ops** – GitHub and Heroku
+* **Dev‑Ops** – GitHub and Heroku - Now ported to Railway
 * **Testing** – `pytest`, Lighthouse, W3C validators, Black.
 
 ## Database Schema 
