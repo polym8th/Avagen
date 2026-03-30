@@ -536,12 +536,6 @@ python manage.py runserver
 
 All code is released under the **[MIT License](https://opensource.org/licenses/MIT)**.
 
-## Acknowledgements
- 
- - Thanks to the mentor programme at Code Institute with Moritz Wach.
-
-
-
 
 
 
